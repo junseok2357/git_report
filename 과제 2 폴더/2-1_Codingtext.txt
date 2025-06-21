@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int solution(int n, int k) {
+    int np = 12000;// 양꼬치 가격
+    int kp = 2000;//음료수 가격
+    
+    int service = n / 10;
+    int kpp = k - service;
+
+    int totalprice = n * np + kpp * kp;
+
+    return totalprice;
+}
+
+int main() {
+    cout << "n\tk\tresult" << endl;
+    cout << 10 << '\t' << 3 << '\t' << solution(10, 3) << endl;
+    cout << 64 << '\t' << 6 << '\t' << solution(64, 6) << endl;
+    return 0;
+}
